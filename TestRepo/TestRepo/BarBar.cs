@@ -13,17 +13,5 @@
         {
             return _fooFoo + "bar";
         }
-
-        public void CpuHeater()
-        {
-            for (int i = 0; i <= int.MaxValue; i++)
-            {
-                DoSomethingElse();
-            }
-        }
-
-        public void DoSomethingElse()
-        {
-        }
     }
 }
