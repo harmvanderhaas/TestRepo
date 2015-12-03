@@ -2,14 +2,31 @@
 {
     public class FooFoo
     {
-        public string Foo()
+        private BarBar _bar;
+
+        public FooFoo()
         {
-           return Bar("foo");
+            _bar = new BarBar(this);
         }
 
-        private string Bar(string foo)
+        public override string ToString()
         {
-            return foo + "bar";
+            return "foo";
+        }
+    }
+
+    public class BarBar
+    {
+        private readonly FooFoo _fooFoo;
+
+        public BarBar(FooFoo fooFoo)
+        {
+            _fooFoo = fooFoo;
+        }
+
+        public override string ToString()
+        {
+            return "bar";
         }
     }
 }
